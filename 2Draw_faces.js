@@ -35,6 +35,17 @@ function drawInteraction(faces, hands) {
     let leftEyeCenterY = face.leftEye.centerY;
     let leftEyeWidth = face.leftEye.width;
     let leftEyeHeight = face.leftEye.height;
+    let firstX = face.keypoints[246].x;
+    let firstY = face.keypoints[246].y;
+    triangle(firstX, firstY, firstX -10, firstY - 10, firstX + 10, firstY-10);
+    ellipse(firstX -5, firstY - 10, 10, 10);
+    ellipse(firstX + 5, firstY - 10, 10, 10);
+    let secondX = face.keypoints[466].x;
+    let secondY = face.keypoints[466].y;
+    triangle(secondX, secondY, secondX -10, secondY - 10, secondX + 10, secondY-10);
+    ellipse(secondX -5, secondY - 10, 10, 10);
+    ellipse(secondX + 5, secondY - 10, 10, 10);
+
     // Left eyebrow
     let leftEyebrowCenterX = face.leftEyebrow.centerX;
     let leftEyebrowCenterY = face.leftEyebrow.centerY;
