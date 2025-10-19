@@ -5,6 +5,7 @@ let img;
 function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
   img = loadImage('/images/filter.PNG');
+  img2 = loadImage('/images/IMG_4363.PNG');
 
 
 }
@@ -83,11 +84,14 @@ function drawInteraction(faces, hands) {
     ellipse(middleforeheadx + 9, middleforeheady - 20, 20, 20);
     // a big heart on the forehead
     
-    let rightforeheadX = face.keypoints[338].x;
+    let rightforeheadX = face.keypoints[297].x;
     let rightforeheadY = face.keypoints[297].y;
-    image(img, rightforeheadX-10, rightforeheadY-20);
+    image(img, rightforeheadX-30, rightforeheadY-20);
     img.resize(100, 100);
-  
+    let leftforeheadX = face.keypoints[67].x;
+    let leftforeheadY = face.keypoints[67].y;
+    image(img2, leftforeheadX-70, leftforeheadY-10);
+    img2.resize(100, 100);
 
     let noseTipX = face.keypoints[4].x;
     let noseTipY = face.keypoints[4].y;
