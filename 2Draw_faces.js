@@ -66,6 +66,9 @@ function drawInteraction(faces, hands) {
     let lipsCenterY = face.lips.centerY;
     let lipsWidth = face.lips.width;
     let lipsHeight = face.lips.height;
+    //I'm gonna actually try to code the top lip and bottom lip seperately
+    let topLipsCenterX = face.keypoints[13].x;
+
 
     // Right eye
     let rightEyeCenterX = face.rightEye.centerX;
@@ -107,6 +110,11 @@ function drawInteraction(faces, hands) {
 
     let noseTipX = face.keypoints[4].x;
     let noseTipY = face.keypoints[4].y;
+    triangle(noseTipX, noseTipY, noseTipX - 20, noseTipY - 20, noseTipX + 20, noseTipY - 20);
+    ellipse(noseTipX - 9, noseTipY - 20, 20, 20);
+    ellipse(noseTipX + 9, noseTipY - 20, 20, 20);
+
+
     /*
     Start drawing on the face here
     */
@@ -116,11 +124,6 @@ function drawInteraction(faces, hands) {
 
     ellipse(leftEyeCenterX, leftEyeCenterY, leftEyeWidth, leftEyeHeight);
 
-    drawPoints(face.leftEye);
-    drawPoints(face.leftEyebrow);
-    drawPoints(face.lips);
-    drawPoints(face.rightEye);
-    drawPoints(face.rightEyebrow);
 
     // drawX(rightEyeCenterX,rightEyeCenterY);
     // drawX(leftEyeCenterX,leftEyeCenterY);
