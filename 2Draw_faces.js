@@ -8,6 +8,8 @@ function prepareInteraction() {
   img2 = loadImage('/images/IMG_4363.PNG');
   imgleft = loadImage('/images/left.PNG');
   imgright = loadImage('/images/right.PNG');
+  leftt = loadImage('/images/leftt.PNG');
+  rightt = loadImage('/images/rightt.PNG');
 
 
 }
@@ -95,7 +97,8 @@ function drawInteraction(faces, hands) {
     ellipse(middleforeheadx -9, middleforeheady - 20, 20, 20);
     ellipse(middleforeheadx + 9, middleforeheady - 20, 20, 20);
     // a big heart on the forehead
-    
+
+    //decal drawings on forehead
     let rightforeheadX = face.keypoints[297].x;
     let rightforeheadY = face.keypoints[297].y;
     image(img, rightforeheadX-30, rightforeheadY-20);
@@ -104,7 +107,12 @@ function drawInteraction(faces, hands) {
     let leftforeheadY = face.keypoints[67].y;
     image(img2, leftforeheadX-70, leftforeheadY-10);
     img2.resize(100, 100);
+    image(leftt, leftforeheadX-90, leftforeheadY-10);
+    leftt.resize(100, 100);
+    image(rightt, rightforeheadX-10, rightforeheadY-10);
+    rightt.resize(100, 100);
 
+    //decal drawing on cheeks
     let leftcheekX= face.keypoints[119].x;
     let leftcheekY= face.keypoints[119].y;
     image(imgright, leftcheekX-30, leftcheekY-20);
