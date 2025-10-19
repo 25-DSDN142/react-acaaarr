@@ -45,6 +45,7 @@ function drawInteraction(faces, hands) {
     let leftEyeHeight = face.leftEye.height;
     let firstX = face.keypoints[246].x;
     let firstY = face.keypoints[246].y;
+    fill(145, 35, 50);
     triangle(firstX, firstY, firstX -10, firstY - 10, firstX + 10, firstY-10);
     ellipse(firstX -5, firstY - 10, 10, 10);
     ellipse(firstX + 5, firstY - 10, 10, 10);
@@ -125,10 +126,7 @@ function drawInteraction(faces, hands) {
     Start drawing on the face here
     */
     noStroke()
-    fill(225, 225, 0);
     // fill(get(leftEyeCenterX, leftEyeCenterY))
-
-    ellipse(leftEyeCenterX, leftEyeCenterY, leftEyeWidth, leftEyeHeight);
 
 
     // drawX(rightEyeCenterX,rightEyeCenterY);
