@@ -6,6 +6,8 @@ function prepareInteraction() {
   //bgImage = loadImage('/images/background.png');
   img = loadImage('/images/filter.PNG');
   img2 = loadImage('/images/IMG_4363.PNG');
+  imgleft = loadImage('/images/left.PNG');
+  imgright = loadImage('/images/right.PNG');
 
 
 }
@@ -92,6 +94,16 @@ function drawInteraction(faces, hands) {
     let leftforeheadY = face.keypoints[67].y;
     image(img2, leftforeheadX-70, leftforeheadY-10);
     img2.resize(100, 100);
+
+    let leftcheekX= face.keypoints[119].x;
+    let leftcheekY= face.keypoints[119].y;
+    image(imgright, leftcheekX-30, leftcheekY-20);
+    imgleft.resize(80, 80); 
+
+    let rightcheekX = face.keypoints[349].x;
+    let rightcheekY = face.keypoints[349].y;
+    image(imgleft, rightcheekX-30, rightcheekY-20);
+    imgright.resize(80, 80);
 
     let noseTipX = face.keypoints[4].x;
     let noseTipY = face.keypoints[4].y;
