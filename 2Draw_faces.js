@@ -45,6 +45,7 @@ function drawInteraction(faces, hands) {
     triangle(secondX, secondY, secondX -10, secondY - 10, secondX + 10, secondY-10);
     ellipse(secondX -5, secondY - 10, 10, 10);
     ellipse(secondX + 5, secondY - 10, 10, 10);
+    //two mini hearts on the far ends of the eyelids
 
     // Left eyebrow
     let leftEyebrowCenterX = face.leftEyebrow.centerX;
@@ -69,6 +70,14 @@ function drawInteraction(faces, hands) {
     let rightEyebrowCenterY = face.rightEyebrow.centerY;
     let rightEyebrowWidth = face.rightEyebrow.width;
     let rightEyebrowHeight = face.rightEyebrow.height;
+
+    let middleforeheadx = face.keypoints[9].x;
+    let middleforeheady = face.keypoints[9].y;
+    triangle(middleforeheadx, middleforeheady, middleforeheadx -20, middleforeheady - 20, middleforeheadx + 20, middleforeheady-20);
+    ellipse(middleforeheadx -9, middleforeheady - 20, 20, 20);
+    ellipse(middleforeheadx + 9, middleforeheady - 20, 20, 20);
+    // a big heart on the forehead
+  
 
     let noseTipX = face.keypoints[4].x;
     let noseTipY = face.keypoints[4].y;
